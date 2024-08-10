@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fizz Buzz</title>
+</head>
+
+<body>
+
+    <script>
+        //when user inputs a number as a limit
+        //loop from 1 to the entered number
+        //if current number is divisible by 3 then print "Fizz"
+        //if current number is divisible by 5 the print "Buzz"
+        //if current number is divisible by 3 and 5 then print "FizzBuzz"
+        //otherwise print the current number
+
+
+        //user input
+        let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
+
+        //start loop
+        for (let i = 1; i <= answer; i++) {
+            if (i % 3 === 0 && i % 5 === 0) { // i is divisible by 3 and 5
+                console.log("FizzBuzz")
+            } else if (i % 3 === 0) { // i is divisible by 3
+                console.log("Fizz");
+            } else if (i % 5 === 0) { // i is divisible by 5
+                console.log("Buzz");
+            } else {
+                console.log(i);
+            }
+        }
+    </script>
+
+</body>
+
+</html>
