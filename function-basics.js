@@ -11,3 +11,22 @@ function min(a, b) {
         return b;
     }
 }
+
+function ask(question, yes, no) {
+    if (confirm(question)) yes();
+    else no();
+}
+
+ask(
+    "Do you agree",
+    function () { alert("You agreed."); },
+    function () { alert("You canceled the execution."); }
+);
+
+// using arrow function:
+
+ask(
+    "Do you agree?",
+    () => alert("You agreed."),
+    () => alert("You canceled the execution.")
+);
