@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM manipulation</title>
+</head>
+
+<body>
+    <h1>THE TITLE OF YOUR WEBPAGE</h1>
+    <div id="container"></div>
+    <button id="btn">CLICK ME!!!!!</button>
+</body>
+<script>
+    const container = document.querySelector('#container');
+
+    const content = document.createElement('div');
+    content.classList.add('content');
+    content.textContent = "This is the glorious text-content!";
+
+    container.appendChild(content);
+
+    const redPara = document.createElement('p');
+    redPara.classList.add('red-text');
+    redPara.textContent = "Hey I'm red!";
+    redPara.style.color = 'red';
+    container.appendChild(redPara);
+
+    const blueH3 = document.createElement('h3');
+    blueH3.classList.add('blue-text');
+    blueH3.textContent = "I'm a blue h3!";
+    blueH3.style.color = 'blue';
+    container.appendChild(blueH3);
+
+    const blackAndPinkDiv = document.createElement('div');
+    blackAndPinkDiv.classList.add('black-border');
+    blackAndPinkDiv.setAttribute('style', 'border:solid 10px black; background:pink')
+    container.appendChild(blackAndPinkDiv);
+
+    const inADiv = document.createElement('h1');
+    inADiv.textContent = "I'm in a div";
+    blackAndPinkDiv.appendChild(inADiv);
+
+    const littlePara = document.createElement('p');
+    littlePara.textContent = "ME TOO!";
+    blackAndPinkDiv.appendChild(littlePara);
+
+    function alertFunction(e) {
+        alert("Yay!! YoU dId iT!1!!");
+        console.log(e);
+        e.target.style.background = "blue";
+    }
+    const btn = document.querySelector('#btn');
+
+    btn.addEventListener("click", alertFunction);
+
+</script>
+
+</html>
